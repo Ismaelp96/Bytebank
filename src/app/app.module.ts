@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NovaTransferenciaComponent } from './nova-transferencia/nova-transferencia.component';
@@ -12,7 +13,7 @@ registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [AppComponent, NovaTransferenciaComponent, ExtratoComponent],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [
     {
       provide: LOCALE_ID,
